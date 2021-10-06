@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#main-container {
+    display: flex;
+}
+
+
+#title {
+    text-align: center;
+    color: #E21B27;
+    height: 10vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100vw;
+    height: 4vh;
+    position: fixed;
+    bottom: 0;
+    background-color: #E21B27; 
+}
