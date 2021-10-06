@@ -55,7 +55,6 @@ body {
 }
 
 /* main game box content rules */
-
 .text_box {
     border: 1px solid #212941;
 }
@@ -70,14 +69,44 @@ body {
 
 #word_input {
     color: #212941;
-    width: 50%;
+    width: 60%;
     height: 20%;
     margin: 5% auto;
     text-align: center;
     font-size: 1.4rem;
 }
 
+/* game bar flexbox container rules */
+#game_bar_container {
+    display: flex;
+    width: 90%;
+    height: 15%;
+    margin: 4% auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.icons {
+    width: 10%;
+}
+
+#progress {
+    width: 50%;
+    height: 75%;
+    background-color: grey;
+}
+
+#bar {
+    width: 1%;
+    height: 100%;
+    background-color: green;
+  }
+
+#wpm_display {
+    width: 30%;
+    margin: 0;
+}
 
 footer {
     width: 100vw;
