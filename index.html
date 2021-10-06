@@ -9,10 +9,12 @@
     <meta name="author" content="Cormac Hogan">
 
     <link rel="stylesheet" href="assets/css/style.css"/>
+
     <!-- important font awesome icons -->
     <script src="https://kit.fontawesome.com/d2e2397167.js" crossorigin="anonymous"></script>
 
     <title>Speed Typer</title>
+
 </head>
 
 <body>
@@ -22,6 +24,27 @@
     <main id="main_container">
 
         <div class="box" id="main_game_box">
+
+            <p class="text_box" id="word_display">
+                testword
+            </p>
+
+            <textarea class="text_box" id="word_input" rows="1"
+            >testword</textarea>
+
+            <div id="game_bar_container">
+
+                <i class="fas fa-play"></i>
+                <i class="fas fa-info"></i>
+
+                <div id="progress">
+                    <div id="bar"></div>
+                  </div>
+
+                <p class="text_box" id="wpm_display">35 wpm</p>
+
+            </div>
+
 
         </div>
 
@@ -38,6 +61,8 @@
     <footer>
 
     </footer>
+
     <script src="assets/script.js"></script>
+
 </body>
 </html>
