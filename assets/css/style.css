@@ -144,10 +144,23 @@ th, td {
     border: 1px solid #E21B27;
   }
 
+/* footer  */
 footer {
     width: 100vw;
-    height: 4vh;
+    height: 4%;
     position: fixed;
     bottom: 0;
-    background-color: #E21B27; 
+    background-color: #E21B27;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_icon {
+    height: 80%;
+}
+
+#trademark {
+    height: 80%;
 }
