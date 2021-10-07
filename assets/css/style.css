@@ -81,12 +81,13 @@ body {
     display: flex;
     width: 90%;
     height: 15%;
-    margin: 4% auto;
+    margin: 3% auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
+/* game bar content */
 .icons {
     width: 10%;
 }
@@ -106,6 +107,27 @@ body {
 #wpm_display {
     width: 30%;
     margin: 0;
+}
+
+
+/* info box content rules */
+#button_bar {
+    display: flex;
+    width: 90%;
+    height: 30%;
+    margin: 5% auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    height: 100%;
+    width: 33%;
+}
+
+#info_title {
+    margin: 5% auto;
 }
 
 footer {
