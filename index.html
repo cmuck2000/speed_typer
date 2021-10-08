@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Typing speed game">
     <meta name="keywords" content="Typing, Speed, Wpm, Touch typing, Game">
     <meta name="author" content="Cormac Hogan">
-
+    <!-- import css style sheet -->
     <link rel="stylesheet" href="assets/css/style.css"/>
 
     <!-- important font awesome icons -->
@@ -21,16 +22,21 @@
 
     <h1 id="title">Speed Typer</h1>
 
+    <!-- main flexbox container -->
     <main id="main_container">
 
+        <!-- main game box -->
         <div class="box" id="main_game_box">
 
+            <!-- word to type display -->
             <p class="text_box" id="word_display">
                 testword
             </p>
 
+            <!-- word to type input -->
             <textarea class="text_box" id="word_input" rows="1" aria-label="Word input" ></textarea>
 
+            <!-- game bar containing info/play button time progress bar and current score -->
             <div id="game_bar_container">
 
                 <i class="fas fa-info icon"></i>
@@ -47,6 +53,7 @@
 
         </div>
 
+        <!-- second box containing game controlls and game info -->
         <div class="box" id="info_box">
 
             <div id="button_bar">
@@ -61,6 +68,7 @@
 
         </div>
 
+        <!-- third box containing high score table  -->
         <div class="box" id="score_box">
 
             <table id="highscore_table">
@@ -101,16 +109,18 @@
 
     </main>
 
+    <!-- footer containing trademark and social links -->
     <footer>
 
         <p id="trademark">Made By Cormac Hogan®</p>
 
-        <a href="https://github.com/cmuck2000/speed_typer" class="footer_icon"><i class="fab fa-github-square"></i></a>
+        <a href="https://github.com/cmuck2000/speed_typer" class="footer_icon" target="_blank"><i class="fab fa-github-square"></i></a>
         
-        <a href="https://www.linkedin.com/in/cormac-hogan/" class="footer_icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/cormac-hogan/" class="footer_icon" target="_blank"><i class="fab fa-linkedin"></i></a>
 
     </footer>
 
+    <!-- import javascript file -->
     <script src="assets/script.js"></script>
 
 </body>
