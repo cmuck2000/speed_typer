@@ -29,7 +29,7 @@ body {
     display: flex;
     width: 90%;
     height: 85%;
-    margin: 5% auto;
+    margin: 1% auto;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
