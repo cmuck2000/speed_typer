@@ -1,12 +1,13 @@
 /* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&family=Roboto&display=swap');
 
-
+/* universal html rules */
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
+/* body universal rules */
 body {
     text-align: center;
     margin: 0;
@@ -14,6 +15,7 @@ body {
     width: 100vw;
 }
 
+/* heading title rules */
 #title {
     text-align: center;
     color: #E21B27;
@@ -41,7 +43,7 @@ body {
     border: 3px solid #E21B27;
 }
 
-/* flexbox item rules */
+/*  main flexbox  container item rules */
 #main_game_box {
     width: 100%;
     height: 40%;
@@ -142,6 +144,7 @@ body {
     border-collapse: collapse;
 }
 
+/*  table border rules */
 th, td {
     border: 1px solid #E21B27;
   }
@@ -159,10 +162,12 @@ footer {
     align-items: center;
 }
 
+/* footer icon rules */
 .footer_icon {
     height: 80%;
 }
 
+/* name trademark rules */
 #trademark {
     height: 80%;
 }
