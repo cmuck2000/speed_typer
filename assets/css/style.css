@@ -10,21 +10,23 @@ html {
 body {
     text-align: center;
     margin: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 #title {
     text-align: center;
     color: #E21B27;
-    height: 10%;
+    height: 5%;
     font-family: 'Gemunu Libre', sans-serif;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 /* rules for main flexbox container */
 #main_container {
     display: flex;
     width: 90%;
-    height: 80vh;
+    height: 85%;
     margin: 5% auto;
     flex-direction: row;
     flex-wrap: wrap;
