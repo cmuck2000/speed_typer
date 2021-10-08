@@ -71,7 +71,14 @@ body {
     width: 60%;
     height: 20%;
     margin: 5% auto;
-    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#word_display_string {
+    margin: 0;
+    font-size: 10vw;
 }
 
 #word_input {
@@ -80,7 +87,7 @@ body {
     height: 15%;
     margin: 5% auto;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 7vw;
 }
 
 /* game bar flexbox container rules */
