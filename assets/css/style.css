@@ -29,7 +29,7 @@ body {
     display: flex;
     width: 90%;
     height: 85%;
-    margin: 1% auto;
+    margin: 2% auto;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -121,6 +121,7 @@ body {
 #wpm_display {
     width: 30%;
     margin: 0;
+    font-size: 6vw;
 }
 
 
