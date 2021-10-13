@@ -179,3 +179,31 @@ footer {
 #trademark {
     height: 80%;
 }
+
+/* laptop size screen media query */
+@media screen and (min-width: 1025px) {
+
+    /* main flexbox container rules */
+    #main_container {
+        align-content: space-around;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    /* main game box rules */
+    #word_display, #word_input, #game_bar_container {
+        margin: 2% auto;
+    }
+
+    /* info box rules */
+    #info_box {
+        width: 48%;
+        height: 35%;
+    }
+    
+    /* score box rules */
+    #score_box {
+        width: 48%;
+        height: 35%;
+    }
+}
