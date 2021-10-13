@@ -195,6 +195,19 @@ footer {
         margin: 2% auto;
     }
 
+    /* main game box text size rules */
+    #word_display_string {
+        font-size: 6vw;
+    }
+    
+    #word_input {
+        font-size: 3vw;
+    }
+    
+    #wpm_display {
+        font-size: 4vw;
+    }
+
     /* info box rules */
     #info_box {
         width: 48%;
