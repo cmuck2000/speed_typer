@@ -34,7 +34,7 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    align-content: space-between;
+    align-content: space-around;
 }
 
 /* universal box rules */
@@ -83,7 +83,7 @@ body {
 
 #word_display_string {
     margin: 0;
-    font-size: 10vw;
+    font-size: 8vw;
 }
 
 #word_input {
@@ -125,7 +125,7 @@ body {
 #wpm_display {
     width: 30%;
     margin: 0;
-    font-size: 6vw;
+    font-size: 5vw;
 }
 
 
@@ -198,15 +198,16 @@ footer {
 
     /* main game box text size rules */
     #word_display_string {
-        font-size: 4vw;
-    }
-    
-    #word_input {
         font-size: 3vw;
     }
     
+    #word_input {
+        font-size: 2vw;
+    }
+    
     #wpm_display {
-        font-size: 4vw;
+        font-size: 2vw;
+        width: 25%;
     }
 
     /* info box rules */
