@@ -182,6 +182,19 @@ th, td {
     width: 70%;
 }
 
+/* exit button */
+#exit_popup {
+    color: grey;
+    float: right;
+}
+
+/* exit button hover/focus  */
+#exit_popup:hover, 
+#exit_popip:focus {
+    color: black;
+    cursor: pointer;
+}
+
 /* footer  */
 footer {
     width: 100vw;
