@@ -49,6 +49,7 @@ let longWords = ["information","available","copyright","university","management"
     // highscore table ID
     let table = document.getElementById("highscore_table");
 
+    // random number within the length of the current word array
     const random = Math.floor(Math.random() * wordLength.length);
 
 
@@ -92,7 +93,7 @@ let longWords = ["information","available","copyright","university","management"
 
         const word = wordLength[random];
         wordDisplayString.innerHTML = '';
-        
+
         word.split('').forEach(character => {
             const characterSpan = document.createElement("span");
             characterSpan.innerText = character;
@@ -126,7 +127,7 @@ let longWords = ["information","available","copyright","university","management"
           }
         })
 
-        if (correct)  
+        if (correct) 
             renderNewWord()
             score += 1;
             wpmScore = `${score} wpm`
