@@ -24,6 +24,8 @@ let longWords = ["information","available","copyright","university","management"
     const wpmScoreBox = document.getElementById("wpm_display");
     var score = 0;
 
+    // progress bar width declaration
+    var width = 0;
 
     // set sounds for timer and typing audio, sound used for mute/unmute function
     let timerSound = document.getElementById("timer_sound");
@@ -59,20 +61,16 @@ let longWords = ["information","available","copyright","university","management"
     // Start Game Function
     function runGame() {
 		
-		// for (i = 5; i > 0; i--) {
-		// 	setinterval( {wordDisplayString.innerText = i}, 1000);
-		// 	playTimerSound();
-		// }	
+		for (i = 5; i > 0; i--) {
+      setInterval(() => {
+        wordDisplayString.innerText = i;
+        playTimerSound();
+      }, 1000)
+		}
 
 		renderNewWord();
-		// startBar();
-		
-
-		// if (width == 100) {
-		// 	endGame();
-		// }
-    
-    }
+		startBar();
+    } 
 
     // Stop Game Function
     // function endGame() {
@@ -161,10 +159,11 @@ let longWords = ["information","available","copyright","university","management"
           if (width >= 100) {
           clearInterval(id);
           i = 0;
+          endGame();
           } else {
               width += 0.0166666666666667;
-              timer.style.width = width + "%";
-              timer.innerHTML =  width.toFixed(1) + "%";
+              bar.style.width = width + "%";
+              bar.innerHTML =  width.toFixed(1) + "%";
         }
       }
     }
@@ -181,5 +180,5 @@ let longWords = ["information","available","copyright","university","management"
     // // wordInput.addEventListener("input", playTypeSound());
 
 
-renderNewWord()
+
 
