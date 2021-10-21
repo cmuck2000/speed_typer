@@ -292,15 +292,18 @@ let longWords = ["information","available","copyright","university","management"
   function toggleSound() {
     if (sound == true) {
       sound = false;
+
     } else {
       sound = true;
-    {
-  }
+
+      } 
+    }
 
   // toggle sound icon
   function toggleSoundIcon() {
     soundToggle.classList.toggle("fas fa-volume-mute");
   }
   
+
 
 
