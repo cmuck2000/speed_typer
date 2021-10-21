@@ -90,11 +90,11 @@ let longWords = ["information","available","copyright","university","management"
     // Render New Word Function
     function renderNewWord() {
 
-        let currentWord = wordLength[w];
+        const random = Math.floor(Math.random() * wordLength.length);
 
         wordDisplayString.innerHTML = "";
         
-        currentWord.split('').forEach(character => {
+        random.split('').forEach(character => {
             const characterSpan = document.createElement("span");
             characterSpan.innerText = character;
             wordDisplayStringS.appendChild(characterSpan);
