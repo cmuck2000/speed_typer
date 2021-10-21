@@ -50,7 +50,7 @@ let longWords = ["information","available","copyright","university","management"
     let table = document.getElementById("highscore_table");
 
     // random number within the length of the current word array
-    const random = Math.floor(Math.random() * wordLength.length);
+    var random = Math.floor(Math.random() * wordLength.length);
 
 
 
@@ -91,7 +91,8 @@ let longWords = ["information","available","copyright","university","management"
     // Render New Word Function
      function renderNewWord() {
 
-        const word = wordLength[random];
+        var random = Math.floor(Math.random() * wordLength.length);
+        var word = wordLength[random];
         wordDisplayString.innerHTML = '';
 
         word.split('').forEach(character => {
