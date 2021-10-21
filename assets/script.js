@@ -58,19 +58,25 @@ let longWords = ["information","available","copyright","university","management"
 
 //Start & Stop Game Functions
 
-    // Start Game Function
-    function runGame() {
-		
-		for (i = 5; i > 0; i--) {
-      setInterval(() => {
-        wordDisplayString.innerText = i;
-        // playTimerSound();
-      }, 1000)
-		}
+    // start game function needed for delayed start
+    function startGame() {
+    renderNewWord();
+    startBar();
+    }
 
-		renderNewWord();
-		startBar();
-    } 
+    // Run Game Function for start button event listener
+    function runGame() {
+
+      // clear all game values
+      score = 0;
+      width = 0;
+      wordInput.value = "";
+      wordDisplayString.innerText = "";
+      bar.style.width = width + "%";
+      bar.innerHTML = width.toFixed(1) + "%";
+      // start startGame function after 4s
+      setTimeout(startGame, 4000) ;
+    }
 
     // Stop Game Function
     // function endGame() {
@@ -151,7 +157,7 @@ let longWords = ["information","available","copyright","university","management"
     function startBar() {
         if (i == 0) {
         i = 1;
-        var width = 0.0166666666666667;
+        var width = 0;
         var id = setInterval(tick, 10);
     
     // 1 tick function of progress bar 1 tick = 100ms and
@@ -161,10 +167,16 @@ let longWords = ["information","available","copyright","university","management"
           i = 0;
           endGame();
           } else {
-              width += 0.0166666666666667;
-              bar.style.width = width + "%";
-              bar.innerHTML =  width.toFixed(1) + "%";
+              adjustWidth();
         }
+      
+      // adjust width of progress bar and % displayed each tick
+      function adjustWidth() {
+        width += 0.0166666666666667;
+        bar.style.width = width + "%";
+        bar.innerHTML = width.toFixed(1) + "%";
+      }
+
       }
     }
   }
@@ -175,9 +187,8 @@ let longWords = ["information","available","copyright","university","management"
 
 
     //  Start Game Button Click Listener
-    playButton.addEventListener('click', runGame());
+    playButton.addEventListener('click', runGame);
 
-    // // wordInput.addEventListener("input", playTypeSound());
 
 
 
