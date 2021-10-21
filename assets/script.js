@@ -73,6 +73,7 @@ let longWords = ["information","available","copyright","university","management"
       bar.style.width = 100 + "%";
       bar.innerHTML = "Get Ready";
       width = 100;
+      wpmScoreBox.innerHTML = "0 wpm";
       
       // start startGame function after 4s
       setTimeout(startGame, 4000) ;
@@ -143,7 +144,7 @@ let longWords = ["information","available","copyright","university","management"
         if (correct &&  barWidth > 0 ) {
             renderNewWord();
             score += 1;
-            wpmScoreBox.innerHTML =  score + "wpm"
+            wpmScoreBox.innerHTML =  score + "wpm";
             console.log(score);
         }
 
@@ -191,7 +192,21 @@ let longWords = ["information","available","copyright","university","management"
     //  Start Game Button Click Listener
     playButton.addEventListener('click', runGame);
 
+    // Info Button Click Listener
+    infoButton.addEventListener('click', openPopup);
 
+
+// Pop up username input / Game Information functions
+
+  // Open  Popup Function
+  function openPopup() {
+    popup.style.display = "block";
+  }
+
+  // Close Popup Function
+  function closePopup() {
+    popup.style.display = "none";
+}
 
 
 
