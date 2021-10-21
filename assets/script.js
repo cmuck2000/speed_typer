@@ -14,8 +14,8 @@ let longWords = ["information","available","copyright","university","management"
     let wordInput = document.getElementById("word_input");
 
     // Get DOM ids for info/play buttons in main game box
-    let infoButton = document.GetElementById("info_button");
-    let playButton = document.GetElementById("play_button");
+    let infoButton = document.getElementById("info_button");
+    let playButton = document.getElementById("play_button");
 
     //  get DOM id for timer % in progress bar
     let timer = document.getElementById("bar").innerText;
@@ -62,10 +62,10 @@ let longWords = ["information","available","copyright","university","management"
     // Start Game Function
     function runGame() {
 		
-		for (i = 5; i > 0; i--) {
-			setinterval( {wordDisplayString.innerText = i}, 1000);
-			playTimerSound();
-		}	
+		// for (i = 5; i > 0; i--) {
+		// 	setinterval( {wordDisplayString.innerText = i}, 1000);
+		// 	playTimerSound();
+		// }	
 
 		renderNewWord();
 		startBar();
@@ -93,23 +93,23 @@ let longWords = ["information","available","copyright","university","management"
     // Render New Word Function
     function renderNewWord() {
 
+        let currentWord = wordLength[1];
 
-        wordDisplayString.innerText = "";
+        wordDisplayString.innerHTML = "";
         
-        let currentWord = wordLength[w];
         let currentWordArray =  currentWord.split("");
         
         let l = currentWordArray.length;
-        for (i = 0; i <l; i++) {
+        for (i = 0; i < l; i++) {
                 let charSpan = document.createElement("span");
-                charSpan.innerText = currentWord[i];
-                word_display_element.appendChild(char_span);
+                charSpan.innerText = currentWordArray[i];
+                wordDisplayString.appendChild(charSpan);
         }
     
 
-        wordInput.value = "";
+        wordInput.value = null;
         wordInput.focus();
-    }   
+    }
 
 
 
