@@ -21,9 +21,9 @@ let longWords = ["information","available","copyright","university","management"
     let timer = document.getElementById("bar").innerText;
 
     // get DOM id for wpm score tracker & set it to zero
-    let wpmScoreBox = document.getElementById("wpm_display");
-    let wpmScore = wpmScoreBox.innerHTML;
-    let score = 0;
+    var wpmScoreBox = document.getElementById("wpm_display");
+    var wpmScore = wpmScoreBox.innerHTML;
+    var score = 0;
 
 
     // set sounds for timer and typing audio, sound used for mute/unmute function
