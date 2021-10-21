@@ -24,9 +24,6 @@ let longWords = ["information","available","copyright","university","management"
     let wpmScore = document.getElementById("wpm_display").innerHTML;
     wpmScore = "0";
 
-    // used to iterate through the arrays
-    let w = 0;
-
     // set sounds for timer and typing audio, sound used for mute/unmute function
     let timerSound = document.getElementById("timer_sound");
     let TypeSound = document.getElementById("type_sound");
