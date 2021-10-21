@@ -79,10 +79,6 @@ let longWords = ["information","available","copyright","university","management"
       // start startGame function after 4s
       setTimeout(startGame, 4000) ;
 
-      if (barWidth >= 100) {
-        endGame();
-      }
-    
     }
 
     // stopGame Function
@@ -93,14 +89,14 @@ let longWords = ["information","available","copyright","university","management"
         wordDisplayString.innerText = "";
         bar.style.width = 0 + "%";
         bar.innerHTML = "Done!";
-        width = 100;
+        width = 0;
         wpmScoreBox.innerHTML = "0 wpm";
     }
 
-    // endGame trigger
-
-    if (barWidth >= 100) {
-      endGame();
+    function checkEndGame() {
+      if (barWidth >= 100) {
+        endGame();
+      }
     }
 
 // Game Logic 
@@ -179,7 +175,7 @@ let longWords = ["information","available","copyright","university","management"
           if (width >= 100 ) {
           clearInterval(id);
           i = 0;
-          endGame();
+          checkEndGame();
           } else {
               adjustWidth();
         }
@@ -191,7 +187,7 @@ let longWords = ["information","available","copyright","university","management"
         bar.innerHTML = width.toFixed(1) + "%";
 
         // set width value to a var
-         barWidth = width.toFixed(1);
+        barWidth = width;
       }
 
       }
