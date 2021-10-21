@@ -235,6 +235,7 @@ let longWords = ["information","available","copyright","university","management"
    function setUsername() {
     username = usernameInput.value;
     usernameInput.placeholder = username;
+    usernameSubmit.innerHTML = username;
     alert("username changed to " + username);
   }
 
@@ -303,6 +304,9 @@ let longWords = ["information","available","copyright","university","management"
   function toggleSoundIcon() {
     soundToggle.classList.toggle("fas fa-volume-mute");
   }
+
+  // change username on button function
+   
   
 
 
