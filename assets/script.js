@@ -25,6 +25,7 @@ let longWords = ["information","available","copyright","university","management"
     var score = 0;
 
     // progress bar width
+    var width = 0;
     var barWidth;
 
     // set sounds for timer and typing audio, sound used for mute/unmute function
@@ -54,8 +55,6 @@ let longWords = ["information","available","copyright","university","management"
     var random = Math.floor(Math.random() * wordLength.length);
 
 
-
-
 //Start & Stop Game Functions
 
     // start game function needed for delayed start
@@ -69,11 +68,12 @@ let longWords = ["information","available","copyright","university","management"
 
       // clear all game values
       score = 0;
-      var width = 0;
       wordInput.value = "";
       wordDisplayString.innerText = "";
-      bar.style.width = width + "%";
-      bar.innerHTML = width.toFixed(1) + "%";
+      bar.style.width = 100 + "%";
+      bar.innerHTML = "Get Ready";
+      width = 100;
+      
       // start startGame function after 4s
       setTimeout(startGame, 4000) ;
     }
@@ -157,15 +157,14 @@ let longWords = ["information","available","copyright","university","management"
     function startBar() {
         if (i == 0) {
         i = 1;
-        var width = 0;
+        width = 0;
         var id = setInterval(tick, 10);
     
     // 1 tick function of progress bar 1 tick = 100ms and
     function tick() {
-          if (width >= 100) {
+          if (width >= 100 ) {
           clearInterval(id);
           i = 0;
-          endGame();
           } else {
               adjustWidth();
         }
