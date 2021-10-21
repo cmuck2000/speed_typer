@@ -145,6 +145,35 @@ let longWords = ["information","available","copyright","university","management"
 
         })
 
+    // Progress Bar functions
+    // initialize i variable
+    var i = 0;
+    
+    // start progress bar function
+    function startBar() {
+        if (i == 0) {
+        i = 1;
+        var width = 0.0166666666666667;
+        var id = setInterval(tick, 10);
+    
+    // 1 tick function of progress bar 1 tick = 100ms and
+    function tick() {
+          if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+          } else {
+              width += 0.0166666666666667;
+              timer.style.width = width + "%";
+              timer.innerHTML =  width.toFixed(1) + "%";
+        }
+      }
+    }
+  }
+
+
+
+
+
 
     //  Start Game Button Click Listener
     playButton.addEventListener('click', runGame());
