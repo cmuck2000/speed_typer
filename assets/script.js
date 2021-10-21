@@ -209,13 +209,16 @@ let longWords = ["information","available","copyright","university","management"
   } 
 
   // exit pop up listeners for click through exit and corner "x" exit
-  exitPopup.addEventListener(click, closePopup);
+  exitPopup.addEventListener("click", closePopup);
 
-  popup.addEventListener(click, function(event) {
+  popup.addEventListener("click", function(event) {
     if (event.target == popup) {
       popup.style.display = "none";
     }
   })
+
+  // pop up when loaded event listener 
+  document.addEventListener("DOMContentLoaded", openPopup);
 
 
 
