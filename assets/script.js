@@ -274,17 +274,17 @@ let longWords = ["information","available","copyright","university","management"
 // Info box button bar functions
 
   // toggle word length function
-  function toggleLength(button) {
-    if (button.value == "mid") {
-      button.value = "long";
+  function toggleLength() {
+    if (wordLengthToggle.innerHTML == "Mid") {
+      wordLengthToggle.innerHTML = "Long";
       wordLength = longWords;
   
-    } else if (button.value == "long") {
-      button.value = "short";
+    } else if (wordLengthToggle.innerHTML == "Long") {
+      wordLengthToggle.innerHTML = "Short";
       wordLength = shortWords;
       
     } else {
-      button.value = "mid"
+      wordLengthToggle.innerHTML = "Mid";
       wordLength = midWords;
     }
   }
@@ -304,3 +304,9 @@ let longWords = ["information","available","copyright","university","management"
   function toggleSoundIcon() {
     soundToggle.classList.toggle("fas fa-volume-mute");
   }
+
+
+// button bar event listeners
+
+  // word length change event listener
+  wordLengthToggle.addEventListener("click",toggleLength);
