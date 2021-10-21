@@ -148,6 +148,8 @@ let longWords = ["information","available","copyright","university","management"
         }
     }
 
+    // word input event listener for game logic functions.
+    wordInput.addEventListener("input", compareStrings(), checkCorrect(), playTypeSound());
 
 
 
