@@ -223,6 +223,7 @@ let longWords = ["information","available","copyright","university","management"
    // set username function
    function setUsername() {
     username = usernameInput.value;
+    usernameInput.placeholder = username;
     alert("username changed to " + username);
   }
 
