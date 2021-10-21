@@ -231,6 +231,16 @@ footer {
     margin:0 3%;
 }
 
+/* for compareStrings function */
+.correct {
+    color: green;
+  }
+  
+  .incorrect {
+    color: red;
+    text-decoration: underline;
+  }
+
 /* laptop size screen media query */
 @media screen and (min-width: 1025px) {
 
