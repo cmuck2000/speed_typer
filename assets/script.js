@@ -127,7 +127,6 @@ let longWords = ["information","available","copyright","university","management"
         if (correct)  { 
             renderNewQuote()
             wpmScore += 1;
-            w++;
         }
     })
 
