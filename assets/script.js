@@ -47,6 +47,7 @@ let longWords = ["information","available","copyright","university","management"
     // highscore table ID
     let table = document.getElementById("highscore_table");
 
+    const random = Math.floor(Math.random() * wordLength.length);
 
 
 
@@ -87,8 +88,7 @@ let longWords = ["information","available","copyright","university","management"
     // Render New Word Function
     function renderNewWord() {
 
-        const random = Math.floor(Math.random() * wordLength.length);
-
+        
         wordDisplayString.innerHTML = "";
         
         random.split('').forEach(character => {
