@@ -215,7 +215,7 @@ let longWords = ["information","available","copyright","university","management"
     if (event.target == popup) {
       popup.style.display = "none";
     }
-  }
+  })
 
 
 
