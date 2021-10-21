@@ -30,7 +30,7 @@ let longWords = ["information","available","copyright","university","management"
 
     // set sounds for timer and typing audio, sound used for mute/unmute function
     let timerSound = document.getElementById("timer_sound");
-    let typeSound = document.getElementById("type_sound");
+    let typeSound = document.getElementById("click_sound");
     let sound = true
 
     // set default username, get DOM ids for username input/submit
