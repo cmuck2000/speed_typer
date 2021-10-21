@@ -4,8 +4,53 @@ let midWords = ["about","search","other","which","their","there","contact","busi
 let longWords = ["information","available","copyright","university","management","international","development","education","community","technology","following","resources","including","directory","government","department","description","insurance","different","categories","conditions","accessories","september","questions","application","financial","equipment","performance","experience","important","activities","additional","something","professional","committee","washington","california","reference","companies","computers","president","australia","discussion","entertainment","agreement","marketing","association","collection","solutions","electronics","technical","microsoft","conference","environment","statement","downloads","applications","requirements","individual","subscribe","everything","production","commercial","advertising","treatment","newsletter","knowledge","currently","construction","registered","protection","engineering","published","corporate","customers","materials","countries","standards","political","advertise","environmental","availability","employment","commission","administration","institute","sponsored","electronic","condition","effective","organization","selection","corporation","executive","necessary","according","particular","facilities","opportunities","appropriate","statistics","investment","christmas","registration","furniture","wednesday","structure","distribution","industrial","potential","responsible","communications","associated","foundation","documents","communication","independent","operating","developed","telephone","population","navigation","operations","therefore","christian","understand","publications","worldwide","connection","publisher","introduction","properties","accommodation","excellent","opportunity","assessment","especially","interface","operation","restaurants","beautiful","locations","significant","technologies","manufacturer","providing","authority","considered","programme","enterprise","educational","employees","alternative","processing","responsibility","resolution","publication","relations","photography","components","assistance","completed","organizations","otherwise","transportation","disclaimer","membership","recommended","background","character","maintenance","functions","trademarks","phentermine","submitted","television","interested","throughout","established","programming","regarding","instructions","increased","understanding","beginning","associates","instruments","businesses","specified","restaurant","procedures","relationship","traditional","sometimes","themselves","transport","interesting","evaluation","implementation","galleries","references","presented","literature","respective","definition","secretary","networking","australian","magazines","francisco","individuals","guidelines","installation","described","attention","difference","regulations","certificate","directions","documentation","automotive","successful","communities","situation","publishing","emergency","developing","determine","temperature","announcements","historical","ringtones","difficult","scientific","satellite","particularly","functional","monitoring","architecture","recommend","dictionary","accounting","manufacturing","professor","generally","continued","techniques","permission","generation","component","guarantee","processes","interests","paperback","classifieds","supported","competition","providers","characters","thousands","apartments","generated","administrative","practices","reporting","essential","affiliate","immediately","designated","integrated","configuration","comprehensive","universal","presentation","languages","compliance","improvement","pennsylvania","challenge","acceptance","strategies","affiliates","multimedia","certified","computing","interactive","procedure","leadership","religious","breakfast","developer","approximately","recommendations","comparison","automatically","minnesota","adventure","institutions","assistant","advertisement","headlines","yesterday","determined","wholesale","extension","statements","completely","electrical","applicable","manufacturers","classical","dedicated","direction","basketball","wisconsin","personnel","identified","professionals","advantage","newsletters","estimated","anonymous","miscellaneous","integration","interview","framework","installed","massachusetts","associate","frequently","discussions","laboratory","destination","intelligence","specifications","tripadvisor","residential","decisions","industries","partnership","editorial","expression","provisions","principles","suggestions","replacement","strategic","economics","compatible","apartment","netherlands","consulting","recreation","participants","favorites","translation","estimates","protected","philadelphia","officials","contained","legislation","parameters","relationships","tennessee","representative","frequency","introduced","departments","residents","displayed","performed","administrator","addresses","permanent","agriculture","constitutes","portfolio","practical","delivered","collectibles","infrastructure","exclusive","originally","utilities","philosophy","regulation","reduction","nutrition","recording","secondary","wonderful","announced","prevention","mentioned","automatic","healthcare","maintained","increasing","connected","directors","participation","containing","combination","amendment","guaranteed","libraries","distributed","singapore","enterprises","convention","principal","certification","previously","buildings","household","batteries","positions","subscription","contemporary","panasonic","permalink","signature","provision","certainly","newspaper","liability","trademark","trackback","americans","promotion","conversion","reasonable","broadband","influence","importance","webmaster","prescription","specifically","represent","conservation","louisiana","javascript","marketplace","evolution","certificates","objectives","suggested","concerned","structures","encyclopedia","continuing","interracial","competitive","suppliers","preparation","receiving","accordance","discussed","elizabeth","reservations","playstation","instruction","annotation","differences","establish","expressed","paragraph","mathematics","compensation","conducted","percentage","mississippi","requested","connecticut","personals","immediate","agricultural","supporting","collections","participate","specialist","experienced","investigation","institution","searching","proceedings","transmission","characteristics","experiences","extremely","verzeichnis","contracts","concerning","developers","equivalent","chemistry","neighborhood","variables","continues"]
 
 // variable declarations
-let wordLength[] = midWords;
 
+// set default array to mid length words
+let wordLength = midWords;
+
+// get DOM ids for word display and word input
+let wordDisplayString = document.getElementById("word_display_string");
+let wordInput = document.getElementById("word_input");
+
+// Get DOM ids for info/play buttons in main game box
+let infoButton = document.GetElementById("info_button");
+let playButton = document.GetElementById("play_button");
+
+//  get DOM id for timer % in progress bar
+let timer = document.getElementById("bar").innerText;
+
+// get DOM id for wpm score tracker & set it to zero
+let wpm_score = document.getElementById("wpm_display").innerText;
+wpm_score = 0;
+
+// used to iterate through the arrays
+let w = 0;
+
+// used for stringCompare function
+let correct_word = true;
+
+// set sounds for timer and typing audio, sound used for mute/unmute function
+let timerSound = document.getElementById("timer_sound");
+let TypeSound = document.getElementById("type_sound");
+let sound = true
+
+// set default username, get DOM ids for username input/submit
+let username = "username";
+let usernameInput = document.getElementById("username_input")
+let usernameSubmit = document.getElementById("username_submit")
+
+// pop up info/username screen & Exit button id
+let popup = document.GetElementById("popup_container");
+let exitPopup = document.GetElementById("exit_popup");
+
+
+// 3 toggle buttons in info box DOM ID
+let soundToggle = document.GetElementById("sound_button");
+let wordLengthToggle = document.GetElementById("word_length_button")
+let usernameChange = document.GetElementById("username_change")
+
+// highscore table ID
+let table = document.getElementById("highscore_table");
 
 
 
