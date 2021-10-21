@@ -24,8 +24,8 @@ let longWords = ["information","available","copyright","university","management"
     const wpmScoreBox = document.getElementById("wpm_display");
     var score = 0;
 
-    // progress bar width declaration
-    var width = 0;
+    // progress bar width
+    var barWidth;
 
     // set sounds for timer and typing audio, sound used for mute/unmute function
     let timerSound = document.getElementById("timer_sound");
@@ -69,7 +69,7 @@ let longWords = ["information","available","copyright","university","management"
 
       // clear all game values
       score = 0;
-      width = 0;
+      var width = 0;
       wordInput.value = "";
       wordDisplayString.innerText = "";
       bar.style.width = width + "%";
@@ -140,7 +140,7 @@ let longWords = ["information","available","copyright","university","management"
         })
 
         // if correct is true render a new word and iterate the score
-        if (correct) {
+        if (correct &&  barWidth > 0 ) {
             renderNewWord();
             score += 1;
             wpmScoreBox.innerHTML =  score + "wpm"
@@ -175,6 +175,9 @@ let longWords = ["information","available","copyright","university","management"
         width += 0.0166666666666667;
         bar.style.width = width + "%";
         bar.innerHTML = width.toFixed(1) + "%";
+
+        // set width value to a var
+         barWidth = width.toFixed(1);
       }
 
       }
