@@ -94,16 +94,12 @@ let longWords = ["information","available","copyright","university","management"
 
         wordDisplayString.innerHTML = "";
         
-        let currentWordArray =  currentWord.split("");
-        
-        let l = currentWordArray.length;
-        for (i = 0; i < l; i++) {
-                let charSpan = document.createElement("span");
-                charSpan.innerText = currentWordArray[i];
-                wordDisplayString.appendChild(charSpan);
-        }
+        currentWord.split('').forEach(character => {
+            const characterSpan = document.createElement("span");
+            characterSpan.innerText = character;
+            wordDisplayStringS.appendChild(characterSpan);
+          })
     
-
         wordInput.value = null;
         wordInput.focus();
     }
