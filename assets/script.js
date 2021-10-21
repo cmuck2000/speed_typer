@@ -220,6 +220,12 @@ let longWords = ["information","available","copyright","university","management"
   // pop up when loaded event listener 
   document.addEventListener("DOMContentLoaded", openPopup);
 
+  // username submit event listener
+  usernameSubmit.AddEventListener("click", setUsername);
+
+  
+
+
 
 
 
