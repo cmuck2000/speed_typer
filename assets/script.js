@@ -22,7 +22,6 @@ let longWords = ["information","available","copyright","university","management"
 
     // get DOM id for wpm score tracker & set it to zero
     const wpmScoreBox = document.getElementById("wpm_display");
-    var wpmScore = wpmScoreBox.innerHTML;
     var score = 0;
 
 
@@ -137,10 +136,13 @@ let longWords = ["information","available","copyright","university","management"
         })
 
         // if correct is true render a new word and iterate the score
-        if (correct) 
+        if (correct) {
             renderNewWord();
             score += 1;
-            wpmScore = score + "wpm";
+            wpmScoreBox.innerHTML =  score + "wpm"
+            console.log(score);
+        }
+
         })
 
 
