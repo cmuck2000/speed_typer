@@ -74,21 +74,34 @@ let longWords = ["information","available","copyright","university","management"
       bar.innerHTML = "Get Ready";
       width = 100;
       wpmScoreBox.innerHTML = "0 wpm";
-      
+      wordInput.focus();
+
       // start startGame function after 4s
       setTimeout(startGame, 4000) ;
+
+      if (barWidth >= 100) {
+        endGame();
+      }
+    
     }
 
-    // Stop Game Function
-    // function endGame() {
+    // stopGame Function
+    function endGame() {
 
-    //     addResult();
-    //     wordInput.value = "";
-    //     wordDisplayString.innerText = "";
-    //     score = 0;
-        
-    // }
+        addResult();
+        wordInput.value = "";
+        wordDisplayString.innerText = "";
+        bar.style.width = 0 + "%";
+        bar.innerHTML = "Done!";
+        width = 100;
+        wpmScoreBox.innerHTML = "0 wpm";
+    }
 
+    // endGame trigger
+
+    if (barWidth >= 100) {
+      endGame();
+    }
 
 // Game Logic 
 
@@ -166,6 +179,7 @@ let longWords = ["information","available","copyright","university","management"
           if (width >= 100 ) {
           clearInterval(id);
           i = 0;
+          endGame();
           } else {
               adjustWidth();
         }
@@ -250,7 +264,7 @@ let longWords = ["information","available","copyright","university","management"
   function addResult() {
     let highscore = score;
   
-    let row = table.insertRow(0);
+    let row = table.insertRow(1);
     let cell0 = row.insertCell(0);
     let cell1 = row.insertCell(1);
     let cell2 = row.insertCell(2);
