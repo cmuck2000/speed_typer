@@ -22,7 +22,9 @@ let longWords = ["information","available","copyright","university","management"
 
     // get DOM id for wpm score tracker & set it to zero
     let wpmScoreBox = document.getElementById("wpm_display");
-     let wpmScore = wpmScoreBox.innerHTML;
+    let wpmScore = wpmScoreBox.innerHTML;
+    let score = 0;
+
 
     // set sounds for timer and typing audio, sound used for mute/unmute function
     let timerSound = document.getElementById("timer_sound");
@@ -78,7 +80,7 @@ let longWords = ["information","available","copyright","university","management"
         addResult();
         wordInput.value = "";
         wordDisplayString.innerText = "";
-        wpmScore = 0;
+        score = 0;
         
     }
 
@@ -126,7 +128,8 @@ let longWords = ["information","available","copyright","university","management"
 
         if (correct)  { 
             renderNewWord()
-            wpmScore += 1;
+            score += 1;
+            wpmScore = `${score} wpm`
         }
     })
 
