@@ -220,14 +220,14 @@ let longWords = ["information","available","copyright","university","management"
   // pop up when loaded event listener 
   document.addEventListener("DOMContentLoaded", openPopup);
 
-  // username submit event listener
-  usernameSubmit.AddEventListener("click", setUsername);
-
-  // set username function
-  function setUsername() {
+   // set username function
+   function setUsername() {
     username = usernameInput.value;
-    alert("username changed to" +username);
+    alert("username changed to " + username);
   }
+
+  // username submit event listener
+  usernameSubmit.addEventListener("click", setUsername);
 
 
 
