@@ -248,7 +248,7 @@ let longWords = ["information","available","copyright","university","management"
 
   // submit game results to high score table function
   function addResult() {
-    let highscore = wpm_score;
+    let highscore = score;
   
     let row = table.insertRow(0);
     let cell0 = row.insertCell(0);
