@@ -206,7 +206,17 @@ let longWords = ["information","available","copyright","university","management"
   // Close Popup Function
   function closePopup() {
     popup.style.display = "none";
-}
+  } 
+
+  // exit pop up listeners for click through exit and corner "x" exit
+  exitPopup.addEventListener(click, closePopup);
+
+  popup.addEventListener(click, function(event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  }
+
 
 
 
