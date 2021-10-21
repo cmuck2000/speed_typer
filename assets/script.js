@@ -77,6 +77,7 @@ let longWords = ["information","available","copyright","university","management"
       wordInput.focus();
 
       // start startGame function after 4s
+      playTimerSound();
       setTimeout(startGame, 4000) ;
 
     }
