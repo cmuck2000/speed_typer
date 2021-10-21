@@ -21,7 +21,7 @@ let longWords = ["information","available","copyright","university","management"
     let timer = document.getElementById("bar").innerText;
 
     // get DOM id for wpm score tracker & set it to zero
-    var wpmScoreBox = document.getElementById("wpm_display");
+    const wpmScoreBox = document.getElementById("wpm_display");
     var wpmScore = wpmScoreBox.innerHTML;
     var score = 0;
 
@@ -113,30 +113,34 @@ let longWords = ["information","available","copyright","university","management"
 
     // Compare Word Function
     wordInput.addEventListener('input', () => {
+
+        // set variables for the spans of dipslayed word and the current input
         const arrayWord = wordDisplayString.querySelectorAll('span');
         const arrayValue = wordInput.value.split('');
       
+        // for each span check if it is empty, correct or incorrect and adjust correct value accordingly
         let correct = true;
-     arrayWord.forEach((characterSpan, index) => {
-          const character = arrayValue[index];
-          if (character == null) {
-            characterSpan.classList.remove('correct');
-            characterSpan.classList.remove('incorrect');
-            correct = false;
-          } else if (character === characterSpan.innerText) {
-            characterSpan.classList.add('correct');
-            characterSpan.classList.remove('incorrect');
-          } else {
-            characterSpan.classList.remove('correct');
-            characterSpan.classList.add('incorrect');
-            correct = false;
-          }
+        arrayWord.forEach((characterSpan, index) => {
+            const character = arrayValue[index];
+            if (character == null) {
+              characterSpan.classList.remove('correct');
+              characterSpan.classList.remove('incorrect');
+              correct = false;
+            } else if (character === characterSpan.innerText) {
+              characterSpan.classList.add('correct');
+              characterSpan.classList.remove('incorrect');
+            } else {
+              characterSpan.classList.remove('correct');
+              characterSpan.classList.add('incorrect');
+              correct = false;
+            }
         })
 
+        // if correct is true render a new word and iterate the score
         if (correct) 
-            renderNewWord()
+            renderNewWord();
             score += 1;
-            wpmScore = `${score} wpm`
+            wpmScore = score + "wpm";
         })
 
 
