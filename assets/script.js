@@ -223,7 +223,11 @@ let longWords = ["information","available","copyright","university","management"
   // username submit event listener
   usernameSubmit.AddEventListener("click", setUsername);
 
-  
+  // set username function
+  function setUsername() {
+    username = usernameInput.value;
+    alert("username changed to" +username);
+  }
 
 
 
