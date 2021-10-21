@@ -230,6 +230,20 @@ let longWords = ["information","available","copyright","university","management"
   usernameSubmit.addEventListener("click", setUsername);
 
 
+// Highscore table functions
 
+  // get current time function
+  let today = Date.now();
+  let todayDate = new Date(today);
 
+    function getCurrentTimeDate() {
+      let today = Date.now();
+      let todayDate = new Date(today);
+      let date = todayDate.toDateString();
+      let time = todayDate.toLocaleTimeString("en-US");
+      let currentTimeDate = `${time} - ${date}`;
+      return currentTimeDate;
+    }
+
+console.log(getCurrentTimeDate());
 
