@@ -10,8 +10,8 @@ let longWords = ["information","available","copyright","university","management"
     let wordLength = midWords;
 
     // get DOM ids for word display and word input
-    let wordDisplayString = document.getElementById("word_display_string");
-    let wordInput = document.getElementById("word_input");
+    const wordDisplayString = document.getElementById("word_display_string");
+    const wordInput = document.getElementById("word_input");
 
     // Get DOM ids for info/play buttons in main game box
     let infoButton = document.getElementById("info_button");
@@ -38,14 +38,14 @@ let longWords = ["information","available","copyright","university","management"
     let usernameSubmit = document.getElementById("username_submit")
 
     // pop up info/username screen & Exit button id
-    let popup = document.GetElementById("popup_container");
-    let exitPopup = document.GetElementById("exit_popup");
+    let popup = document.getElementById("popup_container");
+    let exitPopup = document.getElementById("exit_popup");
 
 
     // 3 toggle buttons in info box DOM ID
-    let soundToggle = document.GetElementById("sound_button");
-    let wordLengthToggle = document.GetElementById("word_length_button")
-    let usernameChange = document.GetElementById("username_change")
+    let soundToggle = document.getElementById("sound_button");
+    let wordLengthToggle = document.getElementById("word_length_button")
+    let usernameChange = document.getElementById("username_change")
 
     // highscore table ID
     let table = document.getElementById("highscore_table");
@@ -110,33 +110,29 @@ let longWords = ["information","available","copyright","university","management"
 
 
     // Compare Word Function
-    function compareStrings() {
+    wordInput.addEventListener('input', () => {
+        const arrayQuote = wordDisplayString.querySelectorAll('span')
+        const arrayValue = wordInput.value.split('')
+      
+        let correct = true
+        arrayQuote.forEach((characterSpan, index) => {
+          const character = arrayValue[index]
+          if (character == null) {
+            characterSpan.classList.remove('correct')
+            characterSpan.classList.remove('incorrect')
+            correct = false
+          } else if (character === characterSpan.innerText) {
+            characterSpan.classList.add('correct')
+            characterSpan.classList.remove('incorrect')
+          } else {
+            characterSpan.classList.remove('correct')
+            characterSpan.classList.add('incorrect')
+            correct = false
+          }
+        })
         
-        let correctWord = true;
-        const wordArray = wordDisplayString.querySelectorAll("span");
-        const wordInputValue= wordInput.value.split("");
-        let wal = wordArray.length
-
-        for (i = 0; i<wal; i++) {
-                let character = wordInputValue[i];
-                
-                if (character == null) {
-
-                    charSpan.classList.remove("correct")
-                   charSpan.classList.remove("incorrect")
-                    correctWord = false;
-                } else if (character ===charSpan.innerText) {
-                    
-                   charSpan.classList.add("correct")
-                   charSpan.classList.remove("incorrect")
-                } else {
-
-                   charSpan.classList.remove("correct")
-                   charSpan.classList.add("incorrect")
-                    correctWord = false;
-                }
-        }
-    }
+        if (correct) renderNewQuote()
+    })
 
     // Score Tracking and Word Array Iteration
     // function checkCorrect() {
