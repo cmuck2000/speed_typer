@@ -126,12 +126,11 @@ let longWords = ["information","available","copyright","university","management"
           }
         })
 
-        if (correct)  { 
+        if (correct)  
             renderNewWord()
             score += 1;
             wpmScore = `${score} wpm`
-        }
-    })
+        })
 
 
     //  Start Game Button Click Listener
