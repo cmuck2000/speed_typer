@@ -14,8 +14,8 @@ let longWords = ["information","available","copyright","university","management"
     const wordInput = document.getElementById("word_input");
 
     // Get DOM ids for info/play buttons in main game box
-    let infoButton = document.getElementById("info_button");
-    let playButton = document.getElementById("play_button");
+    const infoButton = document.getElementById("info_button");
+    const playButton = document.getElementById("play_button");
 
     //  get DOM id for timer % in progress bar
     let timer = document.getElementById("bar").innerText;
@@ -64,7 +64,7 @@ let longWords = ["information","available","copyright","university","management"
 		for (i = 5; i > 0; i--) {
       setInterval(() => {
         wordDisplayString.innerText = i;
-        playTimerSound();
+        // playTimerSound();
       }, 1000)
 		}
 
