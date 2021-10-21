@@ -66,9 +66,9 @@ let longWords = ["information","available","copyright","university","management"
 		startBar();
 		
 
-		if (width == 100) {
-			endGame();
-		}
+		// if (width == 100) {
+		// 	endGame();
+		// }
     
     }
 
@@ -86,7 +86,7 @@ let longWords = ["information","available","copyright","university","management"
 // Game Logic 
 
     // Render New Word Function
-    async function renderNewWord() {
+     function renderNewWord() {
 
         const word = wordLength[random];
         wordDisplayString.innerHTML = "";
