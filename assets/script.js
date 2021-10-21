@@ -65,7 +65,7 @@ let longWords = ["information","available","copyright","university","management"
 		// }	
 
 		renderNewWord();
-		startBar();
+		// startBar();
 		
 
 		// if (width == 100) {
@@ -75,14 +75,14 @@ let longWords = ["information","available","copyright","university","management"
     }
 
     // Stop Game Function
-    function endGame() {
+    // function endGame() {
 
-        addResult();
-        wordInput.value = "";
-        wordDisplayString.innerText = "";
-        score = 0;
+    //     addResult();
+    //     wordInput.value = "";
+    //     wordDisplayString.innerText = "";
+    //     score = 0;
         
-    }
+    // }
 
 
 // Game Logic 
@@ -91,7 +91,7 @@ let longWords = ["information","available","copyright","university","management"
      function renderNewWord() {
 
         const word = wordLength[random];
-        wordDisplayString.innerHTML = "";
+        wordDisplayString.innerHTML = '';
         
         word.split('').forEach(character => {
             const characterSpan = document.createElement("span");
@@ -143,7 +143,7 @@ let longWords = ["information","available","copyright","university","management"
     // // wordInput.addEventListener("input", playTypeSound());
 
 
-
+renderNewWord()
 
 
 
