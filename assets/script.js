@@ -246,5 +246,20 @@ let longWords = ["information","available","copyright","university","management"
       return currentTimeDate;
     }
 
-console.log(getCurrentTimeDate());
+  // submit game results to high score table function
+  function addResult() {
+    let highscore = wpm_score;
+  
+    let row = table.insertRow(0);
+    let cell0 = row.insertCell(0);
+    let cell1 = row.insertCell(1);
+    let cell2 = row.insertCell(2);
+    cell0.innerHTML = username;
+    cell1.innerHTML = highscore + "wpm";
+    cell2.innerHTML = getCurrentTimeDate();
+  }
+
+
+
+    console.log(getCurrentTimeDate());
 
