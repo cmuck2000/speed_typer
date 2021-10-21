@@ -139,6 +139,15 @@ let longWords = ["information","available","copyright","university","management"
         }
     }
 
+    // Score Tracking and Word Array Iteration
+    function checkCorrect() {
+        if (correctWord) {
+                wpm_score += 1;
+                w++;
+                renderNewWord();
+        }
+    }
+
 
 
 
