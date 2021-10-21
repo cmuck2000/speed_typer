@@ -21,14 +21,14 @@ let longWords = ["information","available","copyright","university","management"
     let timer = document.getElementById("bar").innerText;
 
     // get DOM id for wpm score tracker & set it to zero
-    let wpm_score = document.getElementById("wpm_display").innerText;
-    wpm_score = 0;
+    let wpmScore = document.getElementById("wpm_display").innerText;
+    wpmScore = 0;
 
     // used to iterate through the arrays
     let w = 0;
 
     // used for stringCompare function
-    let correct_word = true;
+    let correctWord = true;
 
     // set sounds for timer and typing audio, sound used for mute/unmute function
     let timerSound = document.getElementById("timer_sound");
@@ -83,7 +83,7 @@ let longWords = ["information","available","copyright","university","management"
         addResult();
         wordInput.value = "";
         wordDisplayString.innerText = "";
-        wpm_score = 0;
+        wpmScore = 0;
         
     }
 
@@ -110,6 +110,35 @@ let longWords = ["information","available","copyright","university","management"
         wordInput.value = null;
         wordInput.focus();
     }
+
+
+    // Compare Word Function
+    function compareStrings() {
+        let wordArray = wordDisplayString.getElementsByClassName("span");
+        let wordInput =wordInput.value.split("");
+        let wal = wordArray.length
+
+        for (i = 0; i<wal; i++) {
+                let character = wordArray[i];
+                
+                if (character == null) {
+
+                    charSpan.classList.remove("correct")
+                   charSpan.classList.remove("incorrect")
+                    correctWord = false;
+                } else if (character ===charSpan.innerText) {
+                    
+                   charSpan.classList.add("correct")
+                   charSpan.classList.remove("incorrect")
+                } else {
+
+                   charSpan.classList.remove("correct")
+                   charSpan.classList.add("incorrect")
+                    correctWord = false;
+                }
+        }
+    }
+
 
 
 
