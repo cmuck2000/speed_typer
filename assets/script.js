@@ -74,9 +74,12 @@ let longWords = ["information","available","copyright","university","management"
 		if (width == 100) {
 			endGame();
 		}
+    
+    }
 
     // Stop Game Function
     function endGame() {
+
         addResult();
         wordInput.value = "";
         wordDisplayString.innerText = "";
@@ -84,6 +87,29 @@ let longWords = ["information","available","copyright","university","management"
         
     }
 
+
+// Game Logic 
+
+    // Render New Word Function
+    function renderNewWord() {
+
+
+        wordDisplayString.innerText = "";
+        
+        let currentWord = wordLength[w];
+        let currentWordArray =  currentWord.split("");
+        
+        let l = currentWordArray.length;
+        for (i = 0; i <l; i++) {
+                let charSpan = document.createElement("span");
+                charSpan.innerText = currentWord[i];
+                word_display_element.appendChild(char_span);
+        }
+    
+
+        wordInput.value = "";
+        wordInput.focus();
+    }   
 
 
 
