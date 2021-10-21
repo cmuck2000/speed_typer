@@ -93,6 +93,7 @@ let longWords = ["information","available","copyright","university","management"
         wpmScoreBox.innerHTML = "0 wpm";
     }
 
+    // check if game should end function
     function checkEndGame() {
       if (barWidth >= 100) {
         endGame();
@@ -254,7 +255,7 @@ let longWords = ["information","available","copyright","university","management"
       let time = todayDate.toLocaleTimeString("en-US");
       let currentTimeDate = `${time} - ${date}`;
       return currentTimeDate;
-    }
+    } console.log(getCurrentTimeDate());
 
   // submit game results to high score table function
   function addResult() {
@@ -269,7 +270,22 @@ let longWords = ["information","available","copyright","university","management"
     cell2.innerHTML = getCurrentTimeDate();
   }
 
+// Info box button bar functions
 
+  // toggle word length function
+  function toggleLength(button) {
+    if (button.value == "mid") {
+      button.value = "long";
+      wordLength = longWords;
+  
+    } else if (button.value == "long") {
+      button.value = "short";
+      wordLength = shortWords;
+      
+    } else {
+      button.value = "mid"
+      wordLength = midWords;
+    }
+  }
 
-    console.log(getCurrentTimeDate());
 
