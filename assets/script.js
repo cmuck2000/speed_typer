@@ -88,13 +88,13 @@ let longWords = ["information","available","copyright","university","management"
     // Render New Word Function
     function renderNewWord() {
 
-        
+        const word = wordLength[random];
         wordDisplayString.innerHTML = "";
         
-        random.split('').forEach(character => {
+        word.split('').forEach(character => {
             const characterSpan = document.createElement("span");
             characterSpan.innerText = character;
-            wordDisplayStringS.appendChild(characterSpan);
+            wordDisplayString.appendChild(characterSpan);
           })
     
         wordInput.value = null;
