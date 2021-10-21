@@ -290,20 +290,31 @@ let longWords = ["information","available","copyright","university","management"
   }
 
   // toggle mute/unmute button function
-  function toggleSound() {
-    if (sound == true) {
-      sound = false;
+  // function toggleSound() {
+  //   if (sound == true) {
+  //     sound = false;
 
-    } else {
-      sound = true;
+  //   } else {
+  //     sound = true;
 
-      } 
-    }
+  //     } 
+  //   }
 
   // toggle sound icon
   function toggleSoundIcon() {
-    soundToggle.classList.toggle("fas fa-volume-mute");
-  }
+
+    var soundIcon = document.getElementById("sound_icon");
+
+    if (soundIcon.className === 'fas fa-volume-up') {
+      soundIcon.className = 'fas fa-volume-mute';
+      sound = false;
+    
+  
+    } else {
+      soundIcon.className = 'fas fa-volume-up';
+      sound = true;
+      }
+    }
 
 
 // button bar event listeners
@@ -311,10 +322,12 @@ let longWords = ["information","available","copyright","university","management"
   // word length change event listener
   wordLengthToggle.addEventListener("click",toggleLength);
 
-  // 
+  // username change button event listener
+  usernameChange.addEventListener("click", openPopup);
 
-
-  // 
+  // sound mute/unmute button event listeners 
+  // soundToggle.addEventListener("click", toggleSound);
+  soundToggle.addEventListener("click",toggleSoundIcon);
 
 
 // sound functions
@@ -332,3 +345,5 @@ let longWords = ["information","available","copyright","university","management"
       timerSound.play();
     }
   }
+
+  //
