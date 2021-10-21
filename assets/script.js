@@ -310,3 +310,25 @@ let longWords = ["information","available","copyright","university","management"
 
   // word length change event listener
   wordLengthToggle.addEventListener("click",toggleLength);
+
+  // 
+
+
+  // 
+
+
+// sound functions
+
+  // play typing sound function
+  function playTypeSound() {
+    if (sound) {
+      TypeSound.play();
+    }
+  }
+
+  // play timer sound function
+  function playTimerSound() {
+    if (sound) {
+      timerSound.play();
+    }
+  }
