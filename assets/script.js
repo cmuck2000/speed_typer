@@ -86,7 +86,7 @@ let longWords = ["information","available","copyright","university","management"
 // Game Logic 
 
     // Render New Word Function
-    function renderNewWord() {
+    async function renderNewWord() {
 
         const word = wordLength[random];
         wordDisplayString.innerHTML = "";
@@ -125,7 +125,7 @@ let longWords = ["information","available","copyright","university","management"
         })
 
         if (correct)  { 
-            renderNewQuote()
+            renderNewWord()
             wpmScore += 1;
         }
     })
