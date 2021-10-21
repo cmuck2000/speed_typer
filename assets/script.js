@@ -90,7 +90,7 @@ let longWords = ["information","available","copyright","university","management"
     // Render New Word Function
     function renderNewWord() {
 
-        let currentWord = wordLength[1];
+        let currentWord = wordLength[w];
 
         wordDisplayString.innerHTML = "";
         
@@ -111,40 +111,34 @@ let longWords = ["information","available","copyright","university","management"
 
     // Compare Word Function
     wordInput.addEventListener('input', () => {
-        const arrayQuote = wordDisplayString.querySelectorAll('span')
-        const arrayValue = wordInput.value.split('')
+        const arrayWord = wordDisplayString.querySelectorAll('span');
+        const arrayValue = wordInput.value.split('');
       
-        let correct = true
-        arrayQuote.forEach((characterSpan, index) => {
-          const character = arrayValue[index]
+        let correct = true;
+     arrayWord.forEach((characterSpan, index) => {
+          const character = arrayValue[index];
           if (character == null) {
-            characterSpan.classList.remove('correct')
-            characterSpan.classList.remove('incorrect')
-            correct = false
+            characterSpan.classList.remove('correct');
+            characterSpan.classList.remove('incorrect');
+            correct = false;
           } else if (character === characterSpan.innerText) {
-            characterSpan.classList.add('correct')
-            characterSpan.classList.remove('incorrect')
+            characterSpan.classList.add('correct');
+            characterSpan.classList.remove('incorrect');
           } else {
-            characterSpan.classList.remove('correct')
-            characterSpan.classList.add('incorrect')
-            correct = false
+            characterSpan.classList.remove('correct');
+            characterSpan.classList.add('incorrect');
+            correct = false;
           }
         })
-        
-        if (correct) renderNewQuote()
+
+        if (correct)  { 
+            renderNewQuote()
+            wpm_score += 1;
+            w++;
+        }
     })
 
-    // Score Tracking and Word Array Iteration
-    // function checkCorrect() {
-    //     if (correctWord) {
-    //             wpm_score += 1;
-    //             w++;
-    //             renderNewWord();
-    //     }
-    // }
 
- 
-        
     //  Start Game Button Click Listener
     playButton.addEventListener('click', runGame());
 
