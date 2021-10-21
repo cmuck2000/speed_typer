@@ -289,16 +289,6 @@ let longWords = ["information","available","copyright","university","management"
     }
   }
 
-  // toggle mute/unmute button function
-  // function toggleSound() {
-  //   if (sound == true) {
-  //     sound = false;
-
-  //   } else {
-  //     sound = true;
-
-  //     } 
-  //   }
 
   // toggle sound icon
   function toggleSoundIcon() {
