@@ -139,23 +139,23 @@ let longWords = ["information","available","copyright","university","management"
     }
 
     // Score Tracking and Word Array Iteration
-    function checkCorrect() {
-        if (correctWord) {
-                wpm_score += 1;
-                w++;
-                renderNewWord();
-        }
-    }
+    // function checkCorrect() {
+    //     if (correctWord) {
+    //             wpm_score += 1;
+    //             w++;
+    //             renderNewWord();
+    //     }
+    // }
 
  
         
     //  Start Game Button Click Listener
     playButton.addEventListener('click', runGame());
 
-    // word input event listener for game logic functions.
-    wordInput.addEventListener("input", compareStrings());
-    wordInput.addEventListener("input", checkCorrect());
-    // wordInput.addEventListener("input", playTypeSound());
+    // // word input event listener for game logic functions.
+    // wordInput.addEventListener("input", compareStrings());
+    // wordInput.addEventListener("input", checkCorrect());
+    // // wordInput.addEventListener("input", playTypeSound());
 
 
 
