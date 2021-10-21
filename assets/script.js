@@ -136,9 +136,6 @@ let longWords = ["information","available","copyright","university","management"
     //  Start Game Button Click Listener
     playButton.addEventListener('click', runGame());
 
-    // // word input event listener for game logic functions.
-    // wordInput.addEventListener("input", compareStrings());
-    // wordInput.addEventListener("input", checkCorrect());
     // // wordInput.addEventListener("input", playTypeSound());
 
 
