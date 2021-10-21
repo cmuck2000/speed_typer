@@ -91,16 +91,21 @@ let longWords = ["information","available","copyright","university","management"
     // Render New Word Function
      function renderNewWord() {
 
+        // random word generator
         var random = Math.floor(Math.random() * wordLength.length);
+
+        // get a random word and clear the string display
         var word = wordLength[random];
         wordDisplayString.innerHTML = '';
 
+        // for each character in the word array create a 1 char span
         word.split('').forEach(character => {
             const characterSpan = document.createElement("span");
             characterSpan.innerText = character;
             wordDisplayString.appendChild(characterSpan);
           })
     
+        // set input to null and focus it
         wordInput.value = null;
         wordInput.focus();
     }
