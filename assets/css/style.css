@@ -188,9 +188,14 @@ th, td {
     animation-duration: 2s;
 }
 
+.popup_content > h2 {
+    margin: 10px auto;
+}
+
 li {
     margin: 5px auto;
     font-size: 1.3rem;
+    text-align:start;
 }
 
 /* animation for pop up */
