@@ -310,10 +310,7 @@ footer {
 
 #info_title {
     margin: 0 auto;
-    width: 90%;
-    height: 35%;
     font-size: 4vw;
-    color:  #232428;
 }
 
 /* laptop size screen media query */
@@ -351,9 +348,19 @@ footer {
         width: 48%;
         height: 35%;
     }
-
-    /* footer rules */
-    footer {
-        justify-items: flex-start;
+        #popup_title {
+            margin: 1% auto;
+            font-size: 4vw;
+        }
+        
+        li {
+            margin: 1% auto;
+            font-size: 3vw;
+        }
+    
+      }
+      
+    #info_title {
+        font-size: 3vw;
     }
 }
