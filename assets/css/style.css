@@ -148,7 +148,10 @@ body {
 }
 
 #info_title {
-    margin: 5% auto;
+    margin: 3% auto;
+    width: 90%;
+    height: 35%;
+    font-size: 5vw;
 }
 
 /* highscore table content */
