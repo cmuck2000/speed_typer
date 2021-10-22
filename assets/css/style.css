@@ -215,7 +215,7 @@ th, td {
     border-radius: 5px;
     color:    #232428;
     width: 70%;
-    height: 50%;
+    height: 70%;
     box-shadow: 20px 20px 20px  black;
     animation-name: slide_in;
     animation-duration: 2s;
@@ -290,6 +290,12 @@ footer {
 
 /* tablet size and up */
   @media screen and (min-width: 600px) {
+
+
+    .popup_content {
+        height: 50%;
+    }
+
     #popup_title {
         margin: 1% auto;
         font-size: 6vw;
