@@ -348,19 +348,25 @@ footer {
         width: 48%;
         height: 35%;
     }
-        #popup_title {
-            margin: 1% auto;
-            font-size: 4vw;
-        }
+
+    .popup_content {
+        padding: 3%;
+    }
+
+    #popup_title {
+        margin: 1% auto;
+        font-size: 4vw;
+    }
         
-        li {
-            margin: 1% auto;
-            font-size: 3vw;
-        }
+    li {
+        margin: 1% auto;
+        font-size: 3vw;
+    }
     
-      }
-      
+    
+
     #info_title {
         font-size: 3vw;
     }
+
 }
