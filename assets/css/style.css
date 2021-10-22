@@ -376,3 +376,9 @@ footer {
     }
 
 }
+
+@media screen and (min-width: 2140px) {
+    #info_title {
+        font-size: 2vw;
+    }
+}
