@@ -126,12 +126,15 @@ body {
     width: 50%;
     height: 75%;
     background-color:  #939FA1;
+    border: 2px solid #232428;
+    border-radius: 5px;
 }
 
 #bar {
     width: 0%;
     height: 100%;
     background-color: green;
+    border-radius: 5px;
   }
 
 #wpm_display {
