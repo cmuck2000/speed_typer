@@ -215,7 +215,7 @@ th, td {
     border-radius: 5px;
     color:    #232428;
     width: 70%;
-    height: 70%;
+    height: 60%;
     box-shadow: 20px 20px 20px  black;
     animation-name: slide_in;
     animation-duration: 2s;
@@ -293,7 +293,7 @@ footer {
 
 
     .popup_content {
-        height: 50%;
+        height: 40%;
     }
 
     #popup_title {
