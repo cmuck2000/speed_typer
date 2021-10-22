@@ -213,6 +213,7 @@ let longWords = ["information","available","copyright","university","management"
   // Open  Popup Function
   function openPopup() {
     popup.style.display = "block";
+    usernameInput.placeholder = username;
   }
 
   // Close Popup Function
@@ -235,7 +236,6 @@ let longWords = ["information","available","copyright","university","management"
    // set username function
    function setUsername() {
     username = usernameInput.value;
-    usernameInput.placeholder = username;
     usernameChange.innerHTML = username;
     alert("username changed to " + username);
   }
