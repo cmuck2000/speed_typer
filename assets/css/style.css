@@ -102,6 +102,11 @@ body {
     overflow:hidden;
 }
 
+#word_input:focus {
+    border: 3px solid #232428;
+    outline: none;
+}
+
 /* game bar flexbox container rules */
 #game_bar_container {
     display: flex;
