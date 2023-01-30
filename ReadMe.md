@@ -184,7 +184,7 @@ there is also multiple errors for lines above 80 chars which is because of the w
 
 ### GitHub Pages
 
-The project was deployed to GitHub Pages using the following steps.
+The project was deployed to GitHub Pages
 
 ### Python web server
 
