@@ -9,8 +9,9 @@ let longWords = ["information","available","copyright","university","management"
     // set default array to mid length words
     let wordLength = midWords;
 
-    // get DOM ids for word display and word input
+    // get DOM ids for word display
     const wordDisplayString = document.getElementById("word_display_string");
+    // get DOM ids for word display
     const wordInput = document.getElementById("word_input");
 
     // Get DOM ids for info/play buttons in main game box
@@ -72,6 +73,7 @@ let longWords = ["information","available","copyright","university","management"
       bar.innerHTML = "Get Ready";
       width = 100;
       wpmScoreBox.innerHTML = "0 wpm";
+      wordInput.disabled = false;
       wordInput.focus();
 
       // start startGame function after 4s
@@ -86,6 +88,8 @@ let longWords = ["information","available","copyright","university","management"
         addResult();
         wordInput.value = "";
         wordDisplayString.innerText = "";
+        wordInput.disabled = true;
+
         bar.style.width = 0 + "%";
         bar.innerHTML = "Done!";
         width = 0;
