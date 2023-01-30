@@ -248,7 +248,7 @@ li {
 
 /* exit button hover/focus  */
 #exit_popup:hover, 
-#exit_popip:focus {
+#exit_popup:focus {
     color: black;
     cursor: pointer;
 }

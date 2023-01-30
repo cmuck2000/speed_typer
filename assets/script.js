@@ -19,7 +19,7 @@ let longWords = ["information","available","copyright","university","management"
     const playButton = document.getElementById("play_button");
 
     //  get DOM id for timer % in progress bar
-    let timer = document.getElementById("bar").innerText;
+    let bar = document.getElementById("bar");
 
     // get DOM id for wpm score tracker & set it to zero
     const wpmScoreBox = document.getElementById("wpm_display");
@@ -169,7 +169,7 @@ let longWords = ["information","available","copyright","university","management"
 
     // start progress bar function
     function startBar() {
-        if (i == 0) {
+        if (i === 0) {
         i = 1;
         width = 0;
         var id = setInterval(tick, 10);
@@ -200,9 +200,6 @@ let longWords = ["information","available","copyright","university","management"
 
 
 
-
-
-
     //  Start Game Button Click Listener
     playButton.addEventListener("click", runGame);
 
@@ -227,7 +224,7 @@ let longWords = ["information","available","copyright","university","management"
   exitPopup.addEventListener("click", closePopup);
 
   popup.addEventListener("click", function(event) {
-    if (event.target == popup) {
+    if (event.target === popup) {
       popup.style.display = "none";
     }
   })
@@ -249,17 +246,13 @@ let longWords = ["information","available","copyright","university","management"
 // Highscore table functions
 
   // get current time function
-  let today = Date.now();
-  let todayDate = new Date(today);
-
     function getCurrentTimeDate() {
       let today = Date.now();
       let todayDate = new Date(today);
       let date = todayDate.toDateString();
       let time = todayDate.toLocaleTimeString("en-US");
-      let currentTimeDate = `${time} - ${date}`;
-      return currentTimeDate;
-    } console.log(getCurrentTimeDate());
+      return `${time} - ${date}`;
+    }
 
   // submit game results to high score table function
   function addResult() {
@@ -278,11 +271,11 @@ let longWords = ["information","available","copyright","university","management"
 
   // toggle word length function
   function toggleLength() {
-    if (wordLengthToggle.innerHTML == "Mid") {
+    if (wordLengthToggle.innerHTML === "Mid") {
       wordLengthToggle.innerHTML = "Long";
       wordLength = longWords;
 
-    } else if (wordLengthToggle.innerHTML == "Long") {
+    } else if (wordLengthToggle.innerHTML === "Long") {
       wordLengthToggle.innerHTML = "Short";
       wordLength = shortWords;
 
